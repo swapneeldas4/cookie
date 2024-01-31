@@ -1,0 +1,90 @@
+<div class='cookie-box'>
+    <div class='cookie-row'>
+     
+    <div class='cookie-content'>
+      <p>By clicking "OK" you are agreeing with our
+    and <a href='https://sci-spnl.blogspot.com/p/privacy-policy.html' target='_blank' title='Learn more'>Privacy Policy</a> 
+   It's important to carefully read and understand these agreements before agreeing to them.
+    
+    </p>
+
+
+ 
+
+
+  <button class='cookie-buttons'>OK!</button> 
+  </div>
+  </div>  
+  </div>
+  
+  <style>
+  .cookie-box.hide{display:none}
+  .cookie-box {
+    position: fixed;
+    width: 90%;
+    margin: 20px;
+    max-width: 400px;
+    min-height: 100px;
+    background-color: #ffffff;
+    box-shadow: 25px 12px 25px 12px rgb(30 30 30 / 4%);
+    z-index: 990;
+    border: 2px solid lightgrey;
+    border-radius: 6px;
+    bottom: 15px;
+    right: 0px;
+    padding: 15px;
+  }
+  .cookie-row {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: left;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .cookie-content p {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    font-size: 15px;
+    color: #666666;
+    margin-top: 0!important;
+  }
+  .cookie-content p a{text-decoration:underline;}
+  .cookie-buttons {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    float: left;
+    background-color: #000000;
+    font-family: inherit;
+    font-size: 14px;
+    color: #ffffff;
+    text-decoration: none;
+    opacity: 1;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    padding: 5px;
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+    border-radius: 6px;
+  }  
+  </style>
+  
+  <script>//<![CDATA[
+    cookieChoices = {};
+    const cookieBox = document.querySelector(".cookie-box"),
+    acceptBtn = cookieBox.querySelector("button");
+    acceptBtn.onclick = ()=>{
+      document.cookie = "CookieByKey2Blogging; max-age="+60*60*24*30;
+      if(document.cookie){ 
+        cookieBox.classList.add("hide"); 
+      }else{ 
+        alert("Cookie can't be set! Please unblock this site from the cookie setting of your browser.");
+      }
+    }
+    let checkCookie = document.cookie.indexOf("CookieByKey2Blogging");   
+    checkCookie != -1 ? cookieBox.classList.add("hide") : cookieBox.classList.remove("hide");
+  //]]></script>
